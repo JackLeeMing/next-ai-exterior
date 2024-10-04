@@ -2,13 +2,13 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    background: #F9FCFA;
 
     .section-item {
         min-height: 450px;
     }
 
     .home-page-section-s1 {
+        background-color: #F9FCFA;
         position: relative;
         display: grid;
         height: 500px;
@@ -94,11 +94,14 @@
         }
 
         .right-panel {
+            z-index: 2;
+            position: relative;
             height: 100%;
             background: #56AB97;
             border-radius: 0px 0px 0px 0px;
 
             header {
+                z-index: 10;
                 color: white;
                 justify-content: center;
                 font-family: Raleway, Raleway;
@@ -112,6 +115,7 @@
             }
 
             .log-in {
+                z-index: 10;
                 width: 86px;
                 height: 35px;
                 line-height: 35px;
@@ -120,6 +124,7 @@
             }
 
             .sign-up {
+                z-index: 10;
                 width: 86px;
                 height: 35px;
                 line-height: 35px;
@@ -129,9 +134,20 @@
                 font-size: 16px;
             }
 
+            .right-decoration {
+                z-index: 1;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                width: 95.5px;
+                height: 500px;
+                background: url('/images/heart@2x.png') no-repeat;
+                background-size: 100% 100%;
+            }
         }
 
         .float-images {
+            z-index: 10;
             bottom: 35.5px;
             right: 87px;
             position: absolute;
@@ -176,6 +192,7 @@
         }
 
         .float-badge {
+            z-index: 10;
             width: 56px;
             height: 54px;
             bottom: 61.5px;
@@ -189,17 +206,135 @@
         }
 
         .float-flag-image {
+            z-index: 10;
             position: absolute;
-            z-index: 5;
             bottom: calc(35.5px + 163px - 45px);
             right: 15px;
             width: 382.265px;
             height: 181.59px;
         }
-
     }
 
-    .home-page-section-s2 {}
+    .home-page-section-s2 {
+        width: 100%;
+        box-sizing: border-box;
+        padding-top: 32px;
+        padding-left: 8%;
+
+        .h3-title {
+            padding: 0px;
+            margin: 0px;
+            font-family: Lato, Lato;
+            font-weight: 900;
+            font-size: 29px;
+            color: #14183E;
+            line-height: 40px;
+            text-align: left;
+            font-style: normal;
+            text-transform: none;
+        }
+
+        .images-flags {
+            margin-top: 32px;
+            display: flex;
+
+            .item-normal {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 30px;
+                padding: 15px;
+                width: 200px;
+                height: 200px;
+                background: #F9F9F9;
+                border-radius: 14px 14px 14px 14px;
+
+                &:hover {
+                    background: #56AB97;
+                    box-shadow: 12px 46px 58px 0px rgba(86, 171, 151, 0.4);
+                    color: white;
+                }
+
+                p {
+                    margin-top: 10px;
+                    text-align: center;
+                }
+            }
+
+            .item-normal:not(:first-child) {
+                margin-left: 30px;
+            }
+        }
+
+        .images-think {
+            display: flex;
+            margin-top: 32px;
+
+            .images-think-list {
+                margin-left: 32px;
+                flex: 1;
+
+                .p {
+                    font-family: Lato, Lato;
+                    font-weight: 900;
+                    font-size: 29px;
+                    line-height: 40.5px;
+                    text-align: left;
+                    font-style: normal;
+                    text-transform: none;
+                }
+
+                .p1 {
+                    color: #14183E;
+                }
+
+                .p2 {
+                    color: #FF8700;
+                }
+            }
+
+            .thinks-list {
+                list-style: none;
+
+                .thinks-list-header {
+                    display: flex;
+                    align-items: center;
+
+
+                    img {
+                        width: 16px;
+                        height: 16px;
+                    }
+
+                    .thinks-list-header_title {
+                        margin-left: 10px;
+                        font-family: Lato, Lato;
+                        font-weight: bold;
+                        font-size: 17.5px;
+                        color: #37415C;
+                        line-height: 17.5px;
+                        text-align: left;
+                        font-style: normal;
+                        text-transform: none;
+                    }
+                }
+
+                p {
+                    margin-top: 16px;
+                    margin-bottom: 16px;
+                    font-family: Raleway, Raleway;
+                    font-weight: 400;
+                    font-size: 12.5px;
+                    color: #14183E;
+                    line-height: 19.5px;
+                    text-align: left;
+                    font-style: normal;
+                    text-transform: none;
+                }
+            }
+        }
+    }
 
     .home-page-section-s3 {}
 
