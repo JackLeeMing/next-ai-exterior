@@ -1,6 +1,8 @@
 import "./page.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { Rate } from "antd";
+import { LeftCircleOutlined, RightCircleOutlined } from "@ant-design/icons";
 
 export default function M1Home() {
   return (
@@ -229,8 +231,100 @@ export default function M1Home() {
           </div>
         </div>
       </section>
-      <section className="section-item home-page-section-s3"></section>
+      <section className="section-item home-page-section-s3">
+        <div className="header">
+          <div className="header-text">
+            What our beloved <span className="high-light">users</span>
+          </div>
+          <div className="header-text">say about us</div>
+          <div className="arrow-group">
+            <LeftCircleOutlined color="#56AB97" />
+            <RightCircleOutlined color="#56AB97" />
+          </div>
+        </div>
+        <div className="list-card">
+          <div className="card-item">
+            <div className="quote">&ldquo;</div>
+            <div className="content">
+              AI Exterior House Remodel is amazing! Understood our style, great
+              design, top materials, smooth process. Our home looks incredible.
+              Highly recommend!
+            </div>
+            <div className="user-avatar">
+              <Image
+                src="/images/users/u1.png"
+                width={50.5}
+                height={46}
+                alt="before"
+                priority
+              />
+              <div className="user-info">
+                <div className="username">John Williams</div>
+                <div className="user-desc">40 Years House</div>
+              </div>
+            </div>
+            <div className="user-star">
+              <Rate allowHalf defaultValue={5} />
+            </div>
+          </div>
+          <div className="card-item">
+            <div className="quote">&ldquo;</div>
+            <div className="content">
+              Exceeded expectations. Awesome customization, fast designs,
+              outstanding quality. Team was great. Neighbors are jealous. Glad
+              we chose it.
+            </div>
+            <div className="user-avatar">
+              <Image
+                src="/images/users/u2.png"
+                width={50.5}
+                height={46}
+                alt="before"
+                priority
+              />
+              <div className="user-info">
+                <div className="username">JMaria Swapna</div>
+                <div className="user-desc">15 Years House</div>
+              </div>
+            </div>
+            <div className="user-star">
+              <Rate allowHalf defaultValue={4} />
+            </div>
+          </div>
+          <div className="card-item">
+            <div className="quote">&ldquo;</div>
+            <div className="content">
+              Can’t praise enough. AI knows what it’s doing. Transformed our
+              home. Lots of styles, great result. Durable and energy-efficient.
+              So many compliments.
+            </div>
+            <div className="user-avatar">
+              <Image
+                src="/images/users/u3.png"
+                width={50.5}
+                height={46}
+                alt="before"
+                priority
+              />
+              <div className="user-info">
+                <div className="username">John Williams</div>
+                <div className="user-desc">40 Years House</div>
+              </div>
+            </div>
+            <div className="user-star">
+              <Rate allowHalf defaultValue={5} />
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="section-item home-page-section-s4">
+        <div className="header">
+          <div className="high-light">Easy & Fast Remodel Exterior House</div>
+          <div className="normal">Multiples Exterior Design Styles</div>
+        </div>
+        <div className="image-cards">
+            
+        </div>
         <footer>
           <div className="fotter-left">
             Copyrights, Medkit, 2023 All rights reserved.
