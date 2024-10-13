@@ -28,6 +28,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@ant-design/nextjs-registry": "^1.0.1",
     "@types/bcrypt": "^5.0.2",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.16",

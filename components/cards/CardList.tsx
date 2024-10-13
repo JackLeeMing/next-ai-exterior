@@ -1,5 +1,5 @@
 'use client'
-import { Card, Rate, Row, Col } from "antd";
+import { Card, Rate } from "antd";
 import Image from "next/image";
 const { Meta } = Card;
 
@@ -7,31 +7,30 @@ type HomeCardProps = {
     cards: { img: string, title: string, description: string }[]
 }
 export const HomeCardList = function ({ cards = [] }: HomeCardProps) {
-    return <Row gutter={16}>
+    return <div className="center-home-cards flex gap-8">
         {
             cards.map((card, index) =>
-                <Col key={`card-${index}`} span={8}>
-                    <Card
-                        hoverable
-                        style={{ width: 360 }}
-                        cover={
-                            <Image
-                                src={card.img}
-                                width={360}
-                                height={0}
-                                alt="result"
-                                priority
-                            />
-                        }>
-                        <Meta
-                            title={card.title}
-                            description={card.description}
+                <Card
+                    key={`card-${index}`}
+                    hoverable
+                    style={{ width: 360, flex: '0 0 360px' }}
+                    cover={
+                        <Image
+                            src={card.img}
+                            width={360}
+                            height={0}
+                            alt="result"
+                            priority
                         />
-                    </Card>
-                </Col>
+                    }>
+                    <Meta
+                        title={card.title}
+                        description={card.description}
+                    />
+                </Card>
             )
         }
-    </Row>
+    </div>
 }
 
 

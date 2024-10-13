@@ -1,4 +1,4 @@
-.m1-home-page {
+.home-page {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -494,13 +494,21 @@
             }
         }
 
-        .center-image-cards {
+        .center-home-cards {
             box-sizing: border-box;
             width: 100%;
             margin-top: 39px;
             padding-left: 10%;
+            padding-right: 5%;
+            padding-top: 16px;
+            padding-bottom: 16px;
             display: flex;
             flex-wrap: nowrap;
+            overflow-x: auto;
+
+            .ant-card {
+                border-radius: 0px 0px 4px 4px;
+            }
 
             .ant-card-meta-description {
                 font-size: 12px;
@@ -508,6 +516,29 @@
 
             .ant-card-body {
                 padding-top: 18px !important;
+            }
+
+            &::-webkit-scrollbar {
+                display: block;
+                width: 0px;
+                height: 0px;
+                background: #e8eaec;
+                border-radius: 0px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #95979a;
+                border: 1px solid rgb(192, 196, 205);
+                border-radius: 0px;
+
+                &:hover {
+                    background: #747678;
+                }
+            }
+
+            &::-webkit-scrollbar-track {
+                border-radius: 0px;
+                background: transparent;
             }
         }
 

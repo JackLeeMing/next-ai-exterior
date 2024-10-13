@@ -5,10 +5,12 @@ import { LeftCircleOutlined, RightCircleOutlined } from "@ant-design/icons";
 import { HomeCardList, UserCardList } from '@/components/cards/CardList'
 import { SiteIcons } from '@/components/site/Site'
 import { cards, users } from '@/lib/data'
-export default function M1Home() {
+import "./page.scss";
+
+export default function HomePage() {
 
   return (
-    <div className="m1-home-page flex flex-col">
+    <div className="home-page m1-home-page flex flex-col">
       <section className="section-item home-page-section-s1">
         <div className="left-panel">
           <header>
@@ -23,13 +25,13 @@ export default function M1Home() {
               <Link href="#">
                 <div>Home</div>
               </Link>
-              <Link href="#">
+              <Link href="/create">
                 <div>Create</div>
               </Link>
-              <Link href="#">
+              <Link href="/cases">
                 <div>Cases</div>
               </Link>
-              <Link href="#">
+              <Link href="/blog">
                 <div>Blog</div>
               </Link>
             </div>
@@ -251,9 +253,7 @@ export default function M1Home() {
           <div className="high-light">Easy & Fast Remodel Exterior House</div>
           <div className="normal">Multiples Exterior Design Styles</div>
         </div>
-        <div className="center-image-cards">
-          <HomeCardList cards={cards} />
-        </div>
+        <HomeCardList cards={cards} />
         <div className="fotter-menus">
           <div className="col-1">
             <Image
@@ -274,13 +274,13 @@ export default function M1Home() {
               <Link href="#">
                 <div className="menu-item">Home</div>
               </Link>
-              <Link href="#">
+              <Link href="/create">
                 <div className="menu-item">Create</div>
               </Link>
-              <Link href="#">
+              <Link href="/cases">
                 <div className="menu-item">Cases</div>
               </Link>
-              <Link href="#">
+              <Link href="/blog">
                 <div className="menu-item">Blog</div>
               </Link>
             </div>

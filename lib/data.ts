@@ -1,3 +1,4 @@
+
 export const cards = [
     {
         img: '/images/home/home1.png',
@@ -13,29 +14,111 @@ export const cards = [
         img: '/images/home/home3.png',
         title: 'Colonial Revival',
         description: "On the exterior you'll find a stately front door in the center often surrounded by columns featuring pilasters for added decoration. "
+    },
+    {
+        img: '/images/home/home4.png',
+        title: 'Greek Revival',
+        description: 'Drawing inspiration from ancient Greece, this architectural style features columns, white exterior, and plenty of cornices.'
     }
 ]
 
 export const users = [
     {
         img: '/images/users/u1.png',
-        comment: "Can’t praise enough. AI knows what it’s doing. Transformed our  home. Lots of styles, great result. Durable and energy-efficient. So many compliments.",
+        comment: "AI Exterior House Remodel is amazing! Understood our style, great design, top materials, smooth process. Our home looks incredible. Highly recommend!",
         username: 'John Williams',
         userDesc: '40 Years House',
         rate: 5
     },
     {
         img: '/images/users/u2.png',
-        comment: "Can’t praise enough. AI knows what it’s doing. Transformed our  home. Lots of styles, great result. Durable and energy-efficient. So many compliments.",
-        username: 'John Williams',
-        userDesc: '40 Years House',
-        rate: 5
+        comment: "Exceeded expectations. Awesome customization, fast designs, outstanding quality. Team was great. Neighbors are jealous. Glad we chose it.",
+        username: 'Maria Swapna',
+        userDesc: '15 Years House',
+        rate: 4
     },
     {
         img: '/images/users/u3.png',
         comment: "Can’t praise enough. AI knows what it’s doing. Transformed our  home. Lots of styles, great result. Durable and energy-efficient. So many compliments.",
-        username: 'John Williams',
-        userDesc: '40 Years House',
+        username: 'Emma',
+        userDesc: '10 Years House',
         rate: 5
+    }
+]
+
+export const StyleOptions = [
+    {
+        value: 'Modern',
+        label: 'Modern',
+    },
+    {
+        value: 'Contemporary',
+        label: 'Contemporary',
+    },
+    {
+        value: 'Ranch',
+        label: 'Ranch ',
+    },
+    {
+        value: 'Craftsman',
+        label: 'Craftsman',
+    },
+    {
+        value: 'Colonial',
+        label: 'Colonial ',
+    },
+    {
+        value: 'Cape Cod',
+        label: 'Cape Cod',
+    },
+    {
+        value: 'Tudor',
+        label: 'Tudor',
+    },
+    {
+        value: 'Victorian',
+        label: 'Victorian',
+    },
+    {
+        value: 'Mediterranean',
+        label: 'Mediterranean',
+    },
+    {
+        value: 'Farmhouse',
+        label: 'Farmhouse',
+    },
+    {
+        value: 'Mid-century modern',
+        label: 'Mid-century modern',
+    },
+    {
+        value: 'Townhouse',
+        label: 'Townhouse',
+    },
+    {
+        value: 'American country',
+        label: 'American country',
+    },
+    {
+        value: 'Fashionable eclectic',
+        label: 'Fashionable eclectic',
+    }
+]
+
+export const cases = [
+    {
+        title: 'Case1: Remodel to the Modern Style',
+        before: '/images/cases/case1_before.png',
+        after: '/images/cases/case1_after.png'
+    },
+    {
+        title: 'Case2: Remodel to the Mediterranean style',
+        before: '/images/cases/case2_before.png',
+        after: '/images/cases/case2_after.png'
+    },
+    {
+        title: 'Case3: Remodel to the Victorian style',
+        before: '/images/cases/case3_before.png',
+        after: '/images/cases/case3_after.png'
     }
 ]

@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Analytics } from '@/components/analytics';
 import { ThemeProvider } from '@/components/theme-provider';
 import { TailwindIndicator } from '@/components/tailwind-indicator';
+import { AntdRegistry } from '@ant-design/nextjs-registry';
+import { ConfigProvider } from "antd";
+import theme from "@/app/themeConfig";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -34,7 +37,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`min-h-screen bg-background font-sans ${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <div className="relative flex min-h-screen flex-col">
-            {children}
+            <AntdRegistry>
+              <ConfigProvider theme={theme}>
+                {children}
+              </ConfigProvider>
+            </AntdRegistry>
           </div>
           <Analytics />
           <TailwindIndicator />
