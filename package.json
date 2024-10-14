@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "PORT=3001 next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -28,6 +28,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@ant-design/nextjs-registry": "^1.0.1",
     "@types/bcrypt": "^5.0.2",
     "@types/node": "^20",
@@ -42,6 +43,7 @@
     "prisma": "5.20.0",
     "sass": "^1.79.4",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "webpack": "^5.94.0"
   }
 }

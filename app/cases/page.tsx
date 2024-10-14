@@ -21,7 +21,7 @@ export default function CasesPage() {
                             priority
                         />
                         <div className="memus flex gap-8">
-                            <Link href="/home">
+                            <Link href="/">
                                 <div>Home</div>
                             </Link>
                             <Link href="/create">

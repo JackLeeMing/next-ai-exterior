@@ -9,22 +9,22 @@ export default function Home() {
         <div className='left-menus flex flex-col gap-10'>
             <div className='pad-top'></div>
             <div className='btn-item'>
-                <Link href="/home">
-                    <Button type='primary' size='large' style={{ width: 180 }}>
+                <Link href="/">
+                    <Button type='primary' size='large' style={{ width: 150, height: 52 }}>
                         Homepage
                     </Button>
                 </Link>
             </div>
             <div className='btn-item'>
                 <Link href="/cases">
-                    <Button type='primary' size='large' style={{ width: 180 }}>
+                    <Button type='primary' size='large' style={{ width: 150, height: 52 }}>
                         Cases
                     </Button>
                 </Link>
             </div>
             <div className='btn-item'>
                 <Link href="/blog">
-                    <Button type='primary' size='large' style={{ width: 180 }}>
+                    <Button type='primary' size='large' style={{ width: 150, height: 52 }}>
                         Blog
                     </Button>
                 </Link>

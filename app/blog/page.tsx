@@ -16,16 +16,16 @@ export default function BlogPage() {
                     priority
                 />
                 <div className="memus flex gap-8">
-                    <Link href="/home">
+                    <Link href="/">
                         <div>Home</div>
                     </Link>
                     <Link href="/create">
                         <div>Create</div>
                     </Link>
-                    <Link href="#">
+                    <Link href="/cases">
                         <div>Cases</div>
                     </Link>
-                    <Link href="/blog">
+                    <Link href="#">
                         <div>Blog</div>
                     </Link>
                 </div>
