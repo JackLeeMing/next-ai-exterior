@@ -17,6 +17,11 @@
         .ant-btn-lg {
             border-radius: 16px !important;
         }
+
+        .ant-btn {
+            justify-content: flex-start;
+            padding-left: 22px;
+        }
     }
 
     .center-split {

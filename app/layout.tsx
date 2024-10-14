@@ -20,8 +20,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "AI Remodel",
-  description: "AI Remodel",
+  title: "AI Exterior Home Design",
+  description: "AI home exterior design free, house design interior and exterior,online exterior design",
 };
 
 

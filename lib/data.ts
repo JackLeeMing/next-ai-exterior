@@ -3,22 +3,30 @@ export const cards = [
     {
         img: '/images/home/home1.png',
         title: 'American Craftsman',
-        description: 'Key design features include low-pitched gable roofs with overhangs that make for spacious porches, exposed beams, and natural materials. '
+        description: 'Key design features include low-pitched gable roofs with overhangs that make for spacious porches, exposed beams, and natural materials. ',
+        img_alt: '',
+        img_title: '',
     },
     {
         img: '/images/home/home2.png',
         title: 'Bungalow',
-        description: 'Key feature roofs with overhangs—oftentimes extending across the entire front of the house—which create spacious covered porches.'
+        description: 'Key feature roofs with overhangs—oftentimes extending across the entire front of the house—which create spacious covered porches.',
+        img_alt: '',
+        img_title: '',
     },
     {
         img: '/images/home/home3.png',
         title: 'Colonial Revival',
-        description: "On the exterior you'll find a stately front door in the center often surrounded by columns featuring pilasters for added decoration. "
+        description: "On the exterior you'll find a stately front door in the center often surrounded by columns featuring pilasters for added decoration. ",
+        img_alt: '',
+        img_title: '',
     },
     {
         img: '/images/home/home4.png',
         title: 'Greek Revival',
-        description: 'Drawing inspiration from ancient Greece, this architectural style features columns, white exterior, and plenty of cornices.'
+        description: 'Drawing inspiration from ancient Greece, this architectural style features columns, white exterior, and plenty of cornices.',
+        img_alt: '',
+        img_title: '',
     }
 ]
 
@@ -109,16 +117,28 @@ export const cases = [
     {
         title: 'Case1: Remodel to the Modern Style',
         before: '/images/cases/case1_before.png',
-        after: '/images/cases/case1_after.png'
+        after: '/images/cases/case1_after.png',
+        b_alt: '',
+        b_title: '',
+        a_alt: '',
+        a_title: ''
     },
     {
         title: 'Case2: Remodel to the Mediterranean style',
         before: '/images/cases/case2_before.png',
-        after: '/images/cases/case2_after.png'
+        after: '/images/cases/case2_after.png',
+        b_alt: '',
+        b_title: '',
+        a_alt: '',
+        a_title: ''
     },
     {
         title: 'Case3: Remodel to the Victorian style',
         before: '/images/cases/case3_before.png',
-        after: '/images/cases/case3_after.png'
+        after: '/images/cases/case3_after.png',
+        b_alt: '',
+        b_title: '',
+        a_alt: '',
+        a_title: ''
     }
 ]
