@@ -31,7 +31,7 @@ export default function CasesPage() {
                                 <div>Cases</div>
                             </Link>
                             <Link href="/blog">
-                                <div>Blog</div>
+                                <div style={{display:'none'}}>Blog</div>
                             </Link>
                         </div>
                     </header>
@@ -126,7 +126,7 @@ export default function CasesPage() {
                                 <div className="menu-item">Cases</div>
                             </Link>
                             <Link href="/blog">
-                                <div className="menu-item">Blog</div>
+                                <div style={{display:'none'}} className="menu-item">Blog</div>
                             </Link>
                         </div>
                     </div>

@@ -29,7 +29,7 @@ export default function Home() {
                     </Button>
                 </Link>
             </div>
-            <div className='btn-item'>
+            <div className='btn-item' style={{display:'none'}}>
                 <Link href="/blog">
                     <Button type='primary' size='large' style={{ width: 150, height: 52 }}
                         icon={

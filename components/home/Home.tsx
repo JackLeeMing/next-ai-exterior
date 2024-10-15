@@ -31,7 +31,7 @@ export default function HomeContent() {
                                 <div>Cases</div>
                             </Link>
                             <Link href="/blog">
-                                <div>Blog</div>
+                                <div style={{display:'none'}}>Blog</div>
                             </Link>
                         </div>
                     </header>
@@ -57,7 +57,7 @@ export default function HomeContent() {
                 <div className="right-panel">
                     <div className="right-decoration"></div>
                     <header className="right-panel-top">
-                        <div className="flex gap-8" style={{ zIndex: 10 }}>
+                        <div className="flex gap-8" style={{ zIndex: 10, display: 'none' }}>
                             <Link href="#">
                                 <div className="log-in">Log In</div>
                             </Link>
@@ -280,7 +280,7 @@ export default function HomeContent() {
                                 <div className="menu-item">Cases</div>
                             </Link>
                             <Link href="/blog">
-                                <div className="menu-item">Blog</div>
+                                <div style={{display:'none'}} className="menu-item">Blog</div>
                             </Link>
                         </div>
                     </div>
