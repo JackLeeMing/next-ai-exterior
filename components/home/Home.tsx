@@ -24,14 +24,14 @@ export default function HomeContent() {
                             <Link href="#">
                                 <div>Home</div>
                             </Link>
-                            <Link href="/create">
+                            <Link href="/ai-home-design">
                                 <div>Create</div>
                             </Link>
-                            <Link href="/cases">
+                            <Link href="/house-redesign-case">
                                 <div>Cases</div>
                             </Link>
                             <Link href="/blog">
-                                <div style={{display:'none'}}>Blog</div>
+                                <div style={{ display: 'none' }}>Blog</div>
                             </Link>
                         </div>
                     </header>
@@ -44,11 +44,11 @@ export default function HomeContent() {
                             your vision come true with out AI.
                         </p>
                         <div className="opt-buttons">
-                            <Link href="#">
+                            <Link href="/ai-home-design">
                                 <div className="opt1">Get Started</div>
                             </Link>
 
-                            <Link href="#">
+                            <Link href="/house-redesign-case">
                                 <div className="opt2">Check the Case</div>
                             </Link>
                         </div>
@@ -271,26 +271,26 @@ export default function HomeContent() {
                         <h1 className="title menu">Menu</h1>
                         <div className="menus flex flex-col">
                             <Link href="#">
-                                <div className="menu-item">Home</div>
+                                <div className="menu-item">Homepage</div>
                             </Link>
-                            <Link href="/create">
-                                <div className="menu-item">Create</div>
+                            <Link href="/ai-home-design">
+                                <div className="menu-item">AI Generate HomeDesign</div>
                             </Link>
-                            <Link href="/cases">
-                                <div className="menu-item">Cases</div>
+                            <Link href="/house-redesign-case">
+                                <div className="menu-item">Design Cases</div>
                             </Link>
                             <Link href="/blog">
-                                <div style={{display:'none'}} className="menu-item">Blog</div>
+                                <div style={{ display: 'none' }} className="menu-item">Blog</div>
                             </Link>
                         </div>
                     </div>
                     <div className="col-3">
                         <h1 className="title features">Features</h1>
                         <div className="menus flex flex-col">
-                            <Link href="#">
+                            <Link href="/ai-home-design/exterior-house-remodel">
                                 <div className="menu-item">Exterior house remodel</div>
                             </Link>
-                            <Link href="#">
+                            <Link href="/ai-home-design/interior-house-remodel">
                                 <div className="menu-item">Interior house remodel</div>
                             </Link>
                             <Link href="#">
@@ -300,11 +300,17 @@ export default function HomeContent() {
                     </div>
                     <div className="col-4">
                         <h1 className="title user-cases">User cases</h1>
+
                         <div className="menus flex flex-col">
-                            <div className="menu-item">+1 012 456 789</div>
-                            <div className="menu-item">medkit@labscenter.co</div>
-                            <div className="menu-item">1797 Hilltop Street,</div>
-                            <div className="menu-item">Springfield, USA</div>
+                            <Link href="/modern-style">
+                                <div className="menu-item">Remodel to Modern Style</div>
+                            </Link>
+                            <Link href="/mediterranean-style">
+                                <div className="menu-item">Remodel to Mediterranean style</div>
+                            </Link>
+                            <Link href="/victorian-style">
+                                <div className="menu-item">Remodel to Victorian style</div>
+                            </Link>
                         </div>
                     </div>
                 </div>

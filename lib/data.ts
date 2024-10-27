@@ -115,27 +115,33 @@ export const StyleOptions = [
 
 export const cases = [
     {
-        title: 'Case1: Remodel to the Modern Style',
+        titlePrefix: 'Case1: ',
+        title: 'Remodel to the Modern Style',
         before: '/images/cases/case1_before.png',
         after: '/images/cases/case1_after.png',
+        path: ['house-redesign-case', 'modern-style'],
         b_alt: '',
         b_title: '',
         a_alt: '',
         a_title: ''
     },
     {
-        title: 'Case2: Remodel to the Mediterranean style',
+        titlePrefix: 'Case2: ',
+        title: 'Remodel to the Mediterranean style',
         before: '/images/cases/case2_before.png',
         after: '/images/cases/case2_after.png',
+        path: ['house-redesign-case', 'mediterranean-style'],
         b_alt: '',
         b_title: '',
         a_alt: '',
         a_title: ''
     },
     {
-        title: 'Case3: Remodel to the Victorian style',
+        titlePrefix: 'Case3: ',
+        title: 'Remodel to the Victorian style',
         before: '/images/cases/case3_before.png',
         after: '/images/cases/case3_after.png',
+        path: ['house-redesign-case', 'victorian-style'],
         b_alt: '',
         b_title: '',
         a_alt: '',

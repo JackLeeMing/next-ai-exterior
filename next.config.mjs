@@ -31,6 +31,20 @@ const nextConfig = {
     forceSwcTransforms: true,
   },
   output: mode,
+  redirects: async () => {
+    return [
+      {
+        source: "/create",
+        destination: "/ai-home-design/exterior-house-remodel",
+        permanent: true,
+      },
+      {
+        source: "/ai-home-design",
+        destination: "/ai-home-design/exterior-house-remodel",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

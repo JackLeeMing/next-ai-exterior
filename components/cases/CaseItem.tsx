@@ -3,12 +3,13 @@
 import Image from "next/image";
 
 type Props = {
-    caseData: { title: string, before: string, after: string }
+    caseData: { title: string, before: string, after: string, titlePrefix: string },
+    showPredix: boolean
 }
-export const CaseItem = function ({ caseData }: Props) {
+export const CaseItem = function ({ caseData, showPredix }: Props) {
     return (
         <div className="cases-item">
-            <h3 className="case-title">{caseData.title}</h3>
+            <h3 className="case-title">{showPredix ? caseData.titlePrefix + caseData.title : caseData.title}</h3>
             <div className="case-content">
                 <div className="case-wind case-before">
                     <div className='case-tag'>Before</div>

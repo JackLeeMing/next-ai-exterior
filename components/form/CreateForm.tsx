@@ -3,9 +3,8 @@
 import { useState } from 'react'
 import { PlusOutlined } from '@ant-design/icons';
 import type { UploadProps } from 'antd';
-import { message, Upload, Select, Button, Radio } from 'antd';
+import { message, Upload, Select, Button } from 'antd';
 import { StyleOptions } from '@/lib/data'
-import type { RadioChangeEvent } from 'antd';
 
 const { Dragger } = Upload;
 
@@ -31,16 +30,15 @@ const props: UploadProps = {
     },
 };
 
-
-
-
-
-export const CreateForm = function () {
+const ModleMap: Record<string, string> = {
+    'exterior-house-remodel': "Exterior",
+    'interior-house-remodel': 'Interior'
+}
+export const CreateForm = function ({ model }: { model: string }) {
 
     const defaultValue = StyleOptions[0].value
-
+    const mode = ModleMap[model] ? model : 'exterior-house-remodel'
     const [resStyle, setResStyle] = useState(defaultValue)
-    const [mode, setMode] = useState('Exterior')
     const handleChange = (value: string) => {
         setResStyle(value)
     };
@@ -48,24 +46,12 @@ export const CreateForm = function () {
     const onGenerateClick = () => {
 
     }
-    const onChange4 = ({ target: { value } }: RadioChangeEvent) => {
-        setMode(value);
-    };
-
-    const _modeText = mode.toLocaleLowerCase()
+    const modelStr = ModleMap[mode]
+    const _modeText = modelStr.toLocaleLowerCase()
     return (
         <>
-            <div className='modes'>
-                <Radio.Group
-                    options={[{ label: 'Exterior', value: 'Exterior' }, { label: 'Interior', value: 'Interior' }]}
-                    onChange={onChange4}
-                    value={mode}
-                    optionType="button"
-                    buttonStyle="solid"
-                />
-            </div>
             <h2 className='title'>AI House Remodel</h2>
-            <h3 className='next-title'>Revolutionize Your Home&rsquo;s {mode} with AI</h3>
+            <h3 className='next-title'>Revolutionize Your Home&rsquo;s {modelStr} with AI</h3>
             <div className='step-form'>
                 <h3 className='step-title' style={{ marginTop: 16 }}>
                     Step1: Upload the old {_modeText} house photo

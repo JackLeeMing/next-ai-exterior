@@ -6,8 +6,18 @@ import { CaseItem } from '@/components/cases/CaseItem'
 import { cases } from '@/lib/data'
 import "./page.scss";
 
-export default function CasesPage() {
+type Props = {
+    params?: {
+        caseMode: string;
+    }
+}
 
+// const fitPath = ['house-redesign-case', 'modern-style', 'mediterranean-style', 'victorian-style']
+export default function CasesPage(props: Props) {
+    const params = props.params
+    const caseMode = params?.caseMode || 'house-redesign-case'
+    //house-redesign-case
+    const fitCases = cases.filter(_c => _c.path.includes(caseMode))
     return (
         <div className="cases-page flex flex-col">
             <section className="section-item cases-page-section-s1">
@@ -24,16 +34,17 @@ export default function CasesPage() {
                             <Link href="/">
                                 <div>Home</div>
                             </Link>
-                            <Link href="/create">
+                            <Link href="/ai-home-design">
                                 <div>Create</div>
                             </Link>
                             <Link href="#">
                                 <div>Cases</div>
                             </Link>
                             <Link href="/blog">
-                                <div style={{display:'none'}}>Blog</div>
+                                <div style={{ display: 'none' }}>Blog</div>
                             </Link>
                         </div>
+                        <span style={{ display: 'none' }}>{caseMode}</span>
                     </header>
                     <div className="left-panel-content flex flex-col">
                         <div className="title">User Design Cases</div>
@@ -52,7 +63,7 @@ export default function CasesPage() {
                 <div className="right-panel">
                     <div className="right-decoration"></div>
                     <header className="right-panel-top">
-                        <div className="flex gap-8" style={{ zIndex: 10 }}>
+                        <div className="flex gap-8" style={{ zIndex: 10, display: 'none' }}>
                             <Link href="#">
                                 <div className="log-in">Log In</div>
                             </Link>
@@ -91,10 +102,11 @@ export default function CasesPage() {
             </section>
             <section className="section-item cases-page-section-s2">
                 {
-                    cases.map((caseData, index) =>
+                    fitCases.map((caseData, index) =>
                         <CaseItem
                             caseData={caseData}
-                            key={`case-example-${index}`} />)
+                            key={`case-example-${index}`}
+                            showPredix={caseMode === 'house-redesign-case'} />)
                 }
             </section>
             <section className="section-item cases-page-section-s3">
@@ -116,30 +128,30 @@ export default function CasesPage() {
                     <div className="col-2">
                         <h1 className="title menu">Menu</h1>
                         <div className="menus flex flex-col">
-                            <Link href="#">
-                                <div className="menu-item">Home</div>
+                            <Link href="/">
+                                <div className="menu-item">Homepage</div>
                             </Link>
-                            <Link href="/create">
-                                <div className="menu-item">Create</div>
+                            <Link href="/ai-home-design">
+                                <div className="menu-item">AI Generate HomeDesign</div>
                             </Link>
-                            <Link href="/cases">
-                                <div className="menu-item">Cases</div>
+                            <Link href="/house-redesign-case">
+                                <div className="menu-item">Design Cases</div>
                             </Link>
                             <Link href="/blog">
-                                <div style={{display:'none'}} className="menu-item">Blog</div>
+                                <div style={{ display: 'none' }} className="menu-item">Blog</div>
                             </Link>
                         </div>
                     </div>
                     <div className="col-3">
                         <h1 className="title features">Features</h1>
                         <div className="menus flex flex-col">
-                            <Link href="#">
+                            <Link href="/ai-home-design/exterior-house-remodel">
                                 <div className="menu-item">Exterior house remodel</div>
                             </Link>
-                            <Link href="#">
+                            <Link href="/ai-home-design/interior-house-remodel">
                                 <div className="menu-item">Interior house remodel</div>
                             </Link>
-                            <Link href="#">
+                            <Link href="/">
                                 <div className="menu-item">Redesign home</div>
                             </Link>
                         </div>
@@ -147,10 +159,15 @@ export default function CasesPage() {
                     <div className="col-4">
                         <h1 className="title user-cases">User cases</h1>
                         <div className="menus flex flex-col">
-                            <div className="menu-item">+1 012 456 789</div>
-                            <div className="menu-item">medkit@labscenter.co</div>
-                            <div className="menu-item">1797 Hilltop Street,</div>
-                            <div className="menu-item">Springfield, USA</div>
+                            <Link href="/modern-style">
+                                <div className="menu-item">Remodel to Modern Style</div>
+                            </Link>
+                            <Link href="/mediterranean-style">
+                                <div className="menu-item">Remodel to Mediterranean style</div>
+                            </Link>
+                            <Link href="/victorian-style">
+                                <div className="menu-item">Remodel to Victorian style</div>
+                            </Link>
                         </div>
                     </div>
                 </div>
