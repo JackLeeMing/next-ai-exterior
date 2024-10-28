@@ -122,4 +122,16 @@
     .is-not-current {
         background-color: #B5DCD3;
     }
+
+    .ant-upload-drag-container img {
+        object-fit: contain;
+    }
+
+    .image-wrapper {
+        img {
+            height: 526px;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
 }

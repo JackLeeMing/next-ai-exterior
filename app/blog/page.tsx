@@ -19,7 +19,7 @@ export default function BlogPage() {
                     <Link href="/">
                         <div>Home</div>
                     </Link>
-                    <Link href="/ai-home-design">
+                    <Link href="/ai-home-design/exterior-house-remodel">
                         <div>Create</div>
                     </Link>
                     <Link href="/house-redesign-case">

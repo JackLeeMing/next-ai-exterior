@@ -24,7 +24,7 @@ export default function HomeContent() {
                             <Link href="#">
                                 <div>Home</div>
                             </Link>
-                            <Link href="/ai-home-design">
+                            <Link href="/ai-home-design/exterior-house-remodel">
                                 <div>Create</div>
                             </Link>
                             <Link href="/house-redesign-case">
@@ -44,7 +44,7 @@ export default function HomeContent() {
                             your vision come true with out AI.
                         </p>
                         <div className="opt-buttons">
-                            <Link href="/ai-home-design">
+                            <Link href="/ai-home-design/exterior-house-remodel">
                                 <div className="opt1">Get Started</div>
                             </Link>
 
@@ -273,7 +273,7 @@ export default function HomeContent() {
                             <Link href="#">
                                 <div className="menu-item">Homepage</div>
                             </Link>
-                            <Link href="/ai-home-design">
+                            <Link href="/ai-home-design/exterior-house-remodel">
                                 <div className="menu-item">AI Generate HomeDesign</div>
                             </Link>
                             <Link href="/house-redesign-case">

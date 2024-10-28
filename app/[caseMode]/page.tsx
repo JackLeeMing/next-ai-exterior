@@ -34,7 +34,7 @@ export default function CasesPage(props: Props) {
                             <Link href="/">
                                 <div>Home</div>
                             </Link>
-                            <Link href="/ai-home-design">
+                            <Link href="/ai-home-design/exterior-house-remodel">
                                 <div>Create</div>
                             </Link>
                             <Link href="#">
@@ -131,7 +131,7 @@ export default function CasesPage(props: Props) {
                             <Link href="/">
                                 <div className="menu-item">Homepage</div>
                             </Link>
-                            <Link href="/ai-home-design">
+                            <Link href="/ai-home-design/exterior-house-remodel">
                                 <div className="menu-item">AI Generate HomeDesign</div>
                             </Link>
                             <Link href="/house-redesign-case">
