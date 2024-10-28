@@ -3,7 +3,7 @@ import { type NextRequest } from 'next/server'
 import { getReplicate } from '@/lib/replicate'
 const replicate = getReplicate()
 
-export async function handler(request: NextRequest, { params }: { params: { id: string } }) {
+async function handler(request: NextRequest, { params }: { params: { id: string } }) {
     const { id } = params;
     const prediction = await replicate.predictions.get(id);
 

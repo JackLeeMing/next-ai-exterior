@@ -21,7 +21,7 @@ export function Analytics() {
             </Script>
             <Script
                 defer
-                data-domain="next-js-14-starter-template.vercel.app"
+                data-domain="www.exteriorhouseremodel.com"
                 src={process.env.NEXT_PUBLIC_PLAUSIBLE}></Script>
         </>
     );
