@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { type NextRequest } from 'next/server'
 import { getReplicate } from '@/lib/replicate'
 import type { WebhookEventType } from 'replicate'
+import { VERSION } from '@/lib/data'
 // In production and preview deployments (on Vercel), the VERCEL_URL environment variable is set.
 // In development (on your local machine), the NGROK_HOST environment variable is set.
 const WEBHOOK_HOST = process.env.VERCEL_URL
@@ -15,28 +16,26 @@ type Options = {
     webhook_events_filter: WebhookEventType[]
 }
 
+
 export async function POST(request: NextRequest) {
 
     if (!process.env.REPLICATE_API_TOKEN) {
-        throw new Error(
-            'The REPLICATE_API_TOKEN environment variable is not set. See README.md for instructions on how to set it.'
-        );
+        return NextResponse.json({ error: 'The REPLICATE_API_TOKEN environment variable is not set.', code: 500 });
     }
-
     const replicate = getReplicate()
-
     const {
         prompt,
         a_prompt = 'best quality, extremely detailed',
         n_prompt = 'longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality',
-        image } = await request.json();
+        image
+    } = await request.json();
 
     if (!image) {
-        return NextResponse.json({ detail: 'image can not be empty' }, { status: 500 });
+        return NextResponse.json({ error: 'image can not be empty', code: 500 });
     }
 
     const options: Options = {
-        version: '854e8727697a057c525cdb45ab037f64ecca770a1769cc52287c2e56472a247b',
+        version: VERSION,
         input: {
             eta: 0,
             image: image,
@@ -60,10 +59,16 @@ export async function POST(request: NextRequest) {
         options.webhook_events_filter = ["start", "completed"]
     }
     // A prediction is the result you get when you run a model, including the input, output, and other details
-    const prediction = await replicate.predictions.create(options);
-
-    if (prediction?.error) {
-        return NextResponse.json({ detail: prediction.error }, { status: 500 });
+    try {
+        const prediction = await replicate.predictions.create(options);
+        console.log('prediction', prediction)
+        if (prediction?.error) {
+            return NextResponse.json({ error: prediction.error, code: 500 });
+        }
+        return NextResponse.json({ code: 200, data: prediction }, { status: 201 });
+    } catch (error) {
+        console.log(error)
+        return NextResponse.json({ code: 500, error: 'requst error' });
     }
-    return NextResponse.json(prediction, { status: 201 });
+
 }

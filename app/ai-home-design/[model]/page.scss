@@ -30,9 +30,12 @@
     }
 
     .right-form {
+        height: calc(100% - 16px);
+        box-sizing: border-box;
         padding-top: 16px;
         align-items: center;
         position: relative;
+        overflow-y: auto;
 
         .modes {
             width: 100%;
@@ -128,10 +131,24 @@
     }
 
     .image-wrapper {
+        position: relative;
+        margin-top: 16px;
+
         img {
             height: 526px;
             width: 100%;
             object-fit: contain;
         }
+    }
+
+    .error-detail {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ff4d4f;
+        font-size: 14px;
+        font-weight: bold;
+        height: 48px;
     }
 }

@@ -148,3 +148,5 @@ export const cases = [
         a_title: ''
     }
 ]
+
+export const VERSION = '854e8727697a057c525cdb45ab037f64ecca770a1769cc52287c2e56472a247b'
