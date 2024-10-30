@@ -5,3 +5,4 @@ Allow: /
 
 
 Sitemap: https://www.exteriorhouseremodel.com/sitemap.xml
+Sitemap: https://next.jaquelee.link/sitemap_next.xml
