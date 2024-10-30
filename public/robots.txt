@@ -1,8 +1,7 @@
 # robots.txt for https://www.exteriorhouseremodel.com/
 
 User-agent: *
-Disallow: /ai-home-design/*
-Allow: /*
+Allow: /
 
 
 Sitemap: https://www.exteriorhouseremodel.com/sitemap.xml
