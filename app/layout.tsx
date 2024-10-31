@@ -32,7 +32,9 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <script async src="/js/juxtapose.min.js?v=v1.1.6"></script>
+      </head>
       <body
         className={`min-h-screen bg-background font-sans ${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
